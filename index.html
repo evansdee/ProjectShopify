@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="index.css" /> -->
+
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1fff9;
+}
+
+main {
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgb(241, 255, 249) 20%, rgba(0, 255, 252, 0.5) 35%, rgba(15, 227, 161, 0.5) 100%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main .logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .logo img {
+  width: 15%;
+  margin: 1.5em 0 1em;
+}
+main .logo img.img2 {
+  display: none;
+}
+main .text-below-logo {
+  padding: 0.5em;
+  text-align: center;
+}
+main .text-below-logo h1 {
+  font-weight: 400;
+}
+main .text-below-logo p {
+  line-height: 1.7em;
+}
+main .form-below-text {
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .form-below-text input {
+  width: 90%;
+  padding: 0.5em;
+  font-size: 1.3em;
+  border: 2px solid rgb(223, 219, 219);
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+main .form-below-text button {
+  margin-top: 0.5em;
+  width: 90%;
+  padding: 0.7em;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  font-size: 1.3em;
+  border: none;
+  background-color: #28282b;
+  color: #fff;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+p.money {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.market {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.market img {
+  width: 100%;
+}
+
+.flex-items {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0.5em;
+}
+.flex-items .item {
+  margin: 1em;
+  word-wrap: break-word;
+}
+.flex-items .item h3 {
+  margin: 0.5em 0;
+}
+
+.company-logos {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.company-logos img {
+  width: 160px;
+  margin: 0.5em 0;
+}
+
+div.line {
+  height: 1.5px;
+  background-color: rgba(0, 0, 0, 0.1647058824);
+  margin: 0 auto;
+  width: 90%;
+  margin: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-below-company {
+  text-align: center;
+  padding: 1.5em;
+}
+.text-below-company h1 {
+  margin: 0.5em;
+}
+
+form {
+  background: rgb(6, 158, 76);
+  background: #054a49 radial-gradient(circle at -48% 130%, rgba(208, 242, 36, 0.6666666667) 24%, #054a49 45%);
+  text-align: center;
+  padding-bottom: 5em;
+  width: 100%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: #fff;
+}
+form h1 {
+  margin: 2em 0 0.5em;
+  padding: 1em 1em 0;
+}
+form p.one {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  padding: 0 1em 1em;
+}
+form p.two {
+  background: rgba(90, 119, 182, 0.514);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1em auto 0.5em;
+}
+form input {
+  width: 90%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border-radius: 50px;
+  border: none;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+form button {
+  margin-top: 0.5em;
+  width: 90%;
+  padding: 0.7em;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  font-size: 1.3em;
+  border: none;
+  background-color: #28282b;
+  color: #fff;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+.faq-container {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  width: 100%;
+  padding-bottom: 3em;
+}
+.faq-container h1 {
+  padding: 1.5em 0 1em 1.5em;
+}
+.faq-container .faq {
+  padding: 2em;
+  cursor: pointer;
+}
+.faq-container .faq .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.faq-container .faq .top h3 {
+  width: 80%;
+}
+.faq-container .faq .top p {
+  font-size: 1.5em;
+  font-weight: bolder;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #28282b;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+.faq-container .faq .ans {
+  padding: 0.5em;
+  display: none;
+}
+
+.rotate {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transition: transform 0.5s ease-in-out;
+  -webkit-transition: transform 0.5s ease-in-out;
+  -moz-transition: transform 0.5s ease-in-out;
+  -ms-transition: transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+}
+
+.top-content {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 1.5em 2em;
+  text-align: center;
+  font-size: 0.7em;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.top-content .btn {
+  margin-top: 1em;
+}
+.top-content .btn button {
+  font-size: 1.2em;
+  padding: 1em 1.5em;
+  margin: 0 0.5em;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  font-weight: bolder;
+}
+.top-content .btn button:nth-of-type(1) {
+  background-color: #28282b;
+  color: #fff;
+  border: none;
+}
+.top-content .btn button:nth-of-type(2) {
+  background-color: #fff;
+  color: #28282b;
+  border: 2px solid #28282b;
+}
+.top-content p {
+  font-size: 2em;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  cursor: pointer;
+}
+
+@media (min-width: 900px) {
+  main {
+    padding: 1em 2em;
+  }
+  main .logo img.img1 {
+    width: 7%;
+  }
+  main .logo img.img2 {
+    display: block;
+  }
+  main .text-below-logo {
+    padding: 0.5em 2.5em;
+  }
+  main .form-below-text {
+    margin: 1em auto;
+    width: 50%;
+    align-items: initial;
+    background-color: #fff;
+    flex-direction: row;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: 1px solid rgba(40, 40, 43, 0.2392156863);
+  }
+  main .form-below-text input {
+    font-size: 1em;
+    border: none;
+  }
+  main .form-below-text button {
+    width: 40%;
+    font-size: 1em;
+    margin-top: 0;
+  }
+  p.money {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+  }
+  .market {
+    width: 30%;
+  }
+  .flex-items {
+    width: 100%;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3.5em;
+  }
+  .flex-items .item {
+    width: 30%;
+  }
+  .company-logos {
+    width: 100%;
+  }
+  .company-logos img {
+    width: 200px;
+    margin: 0.5em 0.5em;
+  }
+  .text-below-company {
+    width: 60%;
+    margin: 1em auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  form {
+    padding: 2.5em 5em;
+  }
+  form h1 {
+    padding: 0 3em;
+    font-size: 2.5em;
+  }
+  form .form-con {
+    margin: 1em auto;
+    width: 50%;
+    display: flex;
+    align-items: initial;
+    background-color: #fff;
+    flex-direction: row;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    border: 1px solid rgba(40, 40, 43, 0.2392156863);
+  }
+  form .form-con input {
+    font-size: 1em;
+    border: none;
+  }
+  form .form-con button {
+    width: 40%;
+    font-size: 1em;
+    margin-top: 0;
+  }
+  form p {
+    font-size: 1.2em;
+  }
+  .faq-container {
+    margin: 0 auto;
+    width: 60%;
+  }
+  .faq-container h1 {
+    font-size: 3em;
+  }
+  .faq-container h3 {
+    font-size: 2em;
+  }
+  .top-content {
+    flex-direction: row;
+  }
+  .top-content p {
+    top: 50%;
+    right: 5%;
+    transform: translate(-5%, -50%);
+    -webkit-transform: translate(-5%, -50%);
+    -moz-transform: translate(-5%, -50%);
+    -ms-transform: translate(-5%, -50%);
+    -o-transform: translate(-5%, -50%);
+  }
+}
+@media (min-width: 1300px) {
+  .company-logos {
+    width: 70%;
+  }
+}/*# sourceMappingURL=index.css.map */
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="logo">
+        <img class="img1" src="shop-logo.png" alt="" />
+        <img class="img2" src="shop-logo1.png" alt="" />
+      </div>
+      <div class="text-below-logo">
+        <h1>Bring your ideas to life for $1/month</h1>
+        <p>
+          The future of business is yours to shape. Sign up for a free trial and
+          enjoy your first month for just $1
+        </p>
+      </div>
+
+      <div class="form-below-text">
+        <input type="text" placeholder="Enter your email address" />
+        <button>Start free trial</button>
+      </div>
+    </main>
+
+    <p class="money">
+      Try Shopify free for 3 days, no credit card required. By entering your
+      email, you agree to receive marketing emails from Shopify
+    </p>
+
+    <div class="market">
+      <img src="market.svg" alt="" />
+    </div>
+
+    <div class="flex-items">
+      <div class="item">
+        <img src="item.svg" alt="" />
+        <h3>Customizable templates</h3>
+        <p>Free website designs to launch your store quickly and easily.</p>
+      </div>
+      <div class="item">
+        <img src="item1.svg" alt="" />
+        <h3>All in one</h3>
+        <p>
+          Shopify takes care of everything from marketing and payments to secure
+          transactions and shipping.
+        </p>
+      </div>
+      <div class="item">
+        <img src="item2.svg" alt="" />
+        <h3>A safe and efficient platform</h3>
+        <p>Millions of users trust Shopify to manage their online stores.</p>
+      </div>
+    </div>
+    <div class="line"></div>
+    <div class="company-logos">
+      <img src="airbirds.svg" alt="" />
+      <img src="gymshark.svg" alt="" />
+      <img src="brookline.svg" alt="" />
+      <img src="lessa.svg" alt="" />
+      <img src="kylie.svg" alt="" />
+      <img src="crate.svg" alt="" />
+      <img src="untuckit.svg" alt="" />
+      <img src="death-wish.svg" alt="" />
+      <img src="jungalow.svg" alt="" />
+      <img src="rebecca.svg" alt="" />
+    </div>
+    <div class="line"></div>
+    <div class="text-below-company">
+      <h1>
+        "Shopify is better than any other platform we've played with, and we've
+        played with them all."
+      </h1>
+      <p>Jonathon Bayme, CEO of Theory11</p>
+    </div>
+
+    <form action="">
+      <h1>Build your dream business for $1/month</h1>
+      <p class="one">
+        Sign up for a free trial and enjoy your first month for just $1
+      </p>
+      <div class="form-con">
+        <input type="text" placeholder="Enter your email address" />
+        <button>Start free trial</button>
+      </div>
+     
+      <p class="two">Start for free, then get your first 3 onths for $1/mo.</p>
+      <p class="three">
+        By entering your email, you agree to receive marketing emails from
+        Shopify
+      </p>
+      <div class="some-icon-one"></div>
+      <div class="some-icon-two"></div>
+    </form>
+
+    <div class="faq-container">
+      <h1>FAQ</h1>
+      <div class="faq faq-one">
+        <div class="top">
+          <h3>What is Shopify and how does it work?</h3>
+          <p class="p-one">+</p>
+        </div>
+        <div class="ans ans-one">
+          Try Shopify free for 3 days, no credit card required. After your trial
+          expires, choose a pricing plan that suits the size and stage of your
+          business
+        </div>
+      </div>
+      <div class="faq faq-two">
+        <div class="top">
+          <h3>How much does shopify cost?</h3>
+          <p class="p-two">+</p>
+        </div>
+        <div class="ans ans-two">
+          Try Shopify free for 3 days, no credit card required. After your trial
+          expires, choose a pricing plan that suits the size and stage of your
+          business
+        </div>
+      </div>
+      <div class="faq faq-three">
+        <div class="top">
+          <h3>Can i Use my own domain name with shopify?</h3>
+          <p class="p-three">+</p>
+        </div>
+        <div class="ans ans-three">
+          Try Shopify free for 3 days, no credit card required. After your trial
+          expires, choose a pricing plan that suits the size and stage of your
+          business
+        </div>
+      </div>
+      <div class="faq faq-four">
+        <div class="top">
+          <h3>Do I need to be a developer to use it</h3>
+          <p class="p-four">+</p>
+        </div>
+        <div class="ans ans-four">
+          Try Shopify free for 3 days, no credit card required. After your trial
+          expires, choose a pricing plan that suits the size and stage of your
+          business
+        </div>
+      </div>
+    </div>
+
+    <div class="top-content" id="love">
+      <h1>
+        Start your free-trial today
+      </h1>
+      <div class="btn">
+        <button>
+          Get Started
+        </button>
+        <button>
+          Learn More
+        </button>
+      </div>
+      <p class="top-none">
+        X
+      </p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- <script src="jquery.js"></script> -->
+    <!-- <script src="script.js"></script> -->
+
+    <script>
+      const x = document.getElementById('love')
+const y = document.querySelector('.top-none')
+
+window.addEventListener('scroll',()=>{
+
+if(window.scrollY > 300 && x.className){
+    x.style.display ="flex"
+}
+else{
+    x.style.display ="none"
+}
+})
+
+y.addEventListener('click',()=>{
+    x.id= ""
+    x.className=""
+    x.style.display='none!important'
+})
+
+$(document).ready(function(){
+    $(".faq-one").click(function(){
+        $(".ans-one").slideToggle(500)
+        $(".p-one").toggleClass('rotate')
+    })
+
+    $(".faq-two").click(function(){
+        $(".ans-two").slideToggle(500)
+        $(".p-two").toggleClass('rotate')
+    })
+    $(".faq-three").click(function(){
+        $(".ans-three").slideToggle(500)
+        $(".p-three").toggleClass('rotate')
+    })
+    $(".faq-four").click(function(){
+        $(".ans-four").slideToggle(500)
+        $(".p-four").toggleClass('rotate')
+    })
+})
+
+    </script>
+  </body>
+</html>
